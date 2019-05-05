@@ -1,0 +1,19 @@
+/* pages/myapp01/myapp01.wxss */
+.sview{
+  width: 100%;
+  height: 100vh;
+}
+.swiperview{
+  width: 100%;
+  height: 100%;
+}
+.imgview{
+ width: 100%;
+ height: 100%;
+}
+.btnview{
+width: 30%;
+height: 40px; 
+bottom: 100px;
+/* font-weight: bold; */
+}

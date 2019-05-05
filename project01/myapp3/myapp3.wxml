@@ -1,0 +1,624 @@
+<!--pages/myapp3/myapp3.wxml-->
+<view class='cview'>
+  <view class='c1'>
+    <view class='leftview'>
+      <view class='t1 {{currentTabValue==0 ? "on":""}}' data-value='0' bindtap='selecttab'>财经</view>
+      <view class='t1 {{currentTabValue==1 ? "on":""}}' data-value='1' bindtap='selecttab'>娱乐</view>
+      <view class='t1 {{currentTabValue==2 ? "on":""}}' data-value='2' bindtap='selecttab'>军事</view>
+      <view class='t1 {{currentTabValue==3 ? "on":""}}' data-value='3' bindtap='selecttab'>科技</view>
+      <view class='t1 {{currentTabValue==4 ? "on":""}}' data-value='4' bindtap='selecttab'>社会</view>
+      <view class='t1 {{currentTabValue==5 ? "on":""}}' data-value='5' bindtap='selecttab'>体育</view>
+      <view class='t1 {{currentTabValue==6 ? "on":""}}' data-value='6' bindtap='selecttab'>国际</view>
+      <view class='t1 {{currentTabValue==7 ? "on":""}}' data-value='7' bindtap='selecttab'>时尚</view>
+      <view class='t1 {{currentTabValue==8 ? "on":""}}' data-value='8' bindtap='selecttab'>国内</view>
+    </view>
+
+
+
+
+    <swiper class='swiperview' current='{{currentTabValue}}'>
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{caijing}}">
+
+             <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   </view>
+                </view>
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+     <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{yule}}">
+              <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{junshi}}">
+              <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{keji}}">
+              <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{shehui}}">
+              <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{tiyu}}">
+              <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{guoji}}">
+             <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{shishang}}">
+             <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+      
+
+      <swiper-item>
+        <scroll-view class='scrollview' scroll-y="{{true}}">
+          <view class='s1'>
+            <block wx:for="{{guonei}}">
+              <block wx:if="{{item.thumbnail_pic_s02 ==undefind}}">
+              <view class='s2' bindtap='clicks2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+
+                <view class='s6'>
+
+                  <view class='s4'>
+                    <image src="{{item.thumbnail_pic_s}}" class='s5'></image>
+                  </view>
+
+                  <view class='s7'>
+                    <view>{{item.author_name}}</view>
+                    <view>来源：{{item.category}}</view>
+                  </view>
+
+                </view>
+              </view>
+              </block>
+
+             <block wx:if="{{item.thumbnail_pic_s02 != undefind}}">
+              <view class='s2'>
+                <view class='s3'>
+                  <view>{{item.title}}</view>
+                </view>
+
+                <view class="ss1">
+                   <view class='sss1'>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                         <image src="{{item.thumbnail_pic_s02}}" class='ss5'></image>
+                      </view>
+                      <view class='sss2'>
+                        <image src="{{item.thumbnail_pic_s03}}" class='ss5'></image>
+                      </view>
+                   
+                   
+                   
+                   </view>
+                
+                </view>
+
+                <view class='ss2'>
+                  <view>{{item.author_name}}</view>
+                </view>
+              </view>
+              </block>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </swiper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </view>
+
+
+
+
+</view>

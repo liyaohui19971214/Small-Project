@@ -1,0 +1,41 @@
+<!--pages/v10/v10.wxml-->
+<view class="cview">
+  <view class="topview">
+    <!-- <view class="tview1">
+      <image src='../images/q1.png' class="cimg"></image>
+    </view> -->
+    <text class="ctext">软件1622</text>
+    <!-- <view class="tview2">
+      <image src='../images/q2.png' class="cimg"></image>
+    </view> -->
+  </view>
+  <view class="swiperview">
+    <swiper class="sviewone">
+      <block wx:for="{{swiperdatas}}">
+        <swiper-item>
+          <view class="sviewtwo">
+            <image class="cimg" src="{{item}}"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+  <scroll-view class="sview" scroll-y="{{true}}">
+
+    <view class="sviewcontent">
+      <block wx:for="{{stuinfos}}">
+        <view hover-class='clcikstyle' class="listview" data-pv="{{item.phonenum}}" bindtap='callphonenumber'>
+          <view class="tview1">
+            <image src='{{item.facepath}}' class="cimg"></image>
+          </view>
+          <text class="ctext">{{item.name}}</text>
+          <view class="tview3" bindtap='callphone' data-phone="{{item.phonenum}}">
+            <image src='{{item.phoneimg}}' class="cimg"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="bottomview"></view>
+</view>
