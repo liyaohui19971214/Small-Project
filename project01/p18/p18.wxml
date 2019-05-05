@@ -1,9 +1,0 @@
-<!--pages/p18/p18.wxml-->
-<view class="cview">
-
-  <view  class="topview">点击下方图片扫描条形码[商品的价格]</view>
-
- <view class='contentview'>
-  <image  bindtap='clickScan' src='../images/1.png' class='c1'></image>
- </view>
-</view>
