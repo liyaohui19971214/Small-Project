@@ -2,7 +2,7 @@
 .cview{
   width: 100%;
   height: 100vh;
-  background:white;
+  /* background:white; */
 }
 .topview{
   width: 100%;
@@ -18,7 +18,7 @@
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 20px;
-  background-color: #F5F5F5;
+  /* background-color: #F5F5F5; */
 }
 .v2{
   width: 8%;
@@ -49,7 +49,7 @@
 }
 .contentview{
   width: 100%;
-  height: 50%;
+  height: 62%;
   /* border: 1px solid red; */
 }
 .c1{
@@ -92,10 +92,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 .s2{
-  width: 28%;
+  width: 30%;
   height: 32%;
   /* border: 1px solid blue; */
   margin: 5px;
@@ -109,7 +108,6 @@
   font-size: 15px;
   border-radius: 20%;
   box-shadow: 8px 8px 40px #DCDCDC;
-
 }
 .s3{
   width: 50%;
@@ -119,40 +117,61 @@
   width: 100%;
   height: 100%;
 }
-.bottomview{
+.scrollview1{
   width: 100%;
-  height: 12%;
-  background-color: #F5F5F5;
-
+  height: 100%;
+  
 }
-.b1{
+.imgview{
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
- 
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* border: 1px solid red; */
 }
-.b2{
-  width: 20%;
-  height: 80%;
-  /* border: 1px solid black; */
-  margin: 9px;
+.imgview1{
+  width: 100%;
+  height: 15%;
+  /* border: 1px solid 	#DCDCDC; */
+  display: flex;
+}
+.imgview2{
+  width: 15%;
+  height: 100%;
+  /* border: 1px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-size: 15px;
-    font-family: 楷体;
-  /* font-weight: bold; */
-  letter-spacing: 1px;
 }
-.b3{
+.imgview3{
+  width: 70%;
+  height: 100%;
+  /* border: 1px solid gold; */
+}
+.imgview4{
+  width: 15%;
+  height: 100%;
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid 	#DCDCDC; 
+}
+.imgview5{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+border-bottom: 1px solid 	#DCDCDC;
+font-family: 楷体;
+margin-left: 15px;
+}
+.i1{
   width: 50%;
   height: 50%;
-  /* border: 1px solid blue; */
 }
-.b4{
-  width: 100%;
-  height: 100%;
+.clcikstyle {
+  background-color: #F5F5F5;
 }

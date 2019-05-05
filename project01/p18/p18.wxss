@@ -1,0 +1,25 @@
+/* pages/p18/p18.wxss */
+.cview{
+  width: 100%;
+  height: 100vh;
+  background-color: bisque;
+}
+.topview{
+  width: 100%;
+  height: 10%;
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contentview{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c1{
+  width: 100%;
+  height: 100%;
+}

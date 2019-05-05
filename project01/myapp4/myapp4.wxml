@@ -1,0 +1,24 @@
+<!--pages/myapp4/myapp4.wxml-->
+<view class='cview'>
+  <!-- <view class='topview'></view>
+  <view class='contentview'>
+     <view class='c1'></view>
+     <view class='c2'></view>
+  </view> -->
+  
+  
+  
+ 
+  <web-view  src="{{path}}">
+   
+
+  </web-view>
+  
+
+
+
+
+
+
+
+</view>

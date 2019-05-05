@@ -5,29 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperdatas: [{ "image": "http://sxcr3v.natappfree.cc/images/6.jpg" }, 
-      { "image": "http://sxcr3v.natappfree.cc/images/7.jpg" }, 
-      { "image": "http://sxcr3v.natappfree.cc/images/4.jpg" }, 
-      { "image": "http://sxcr3v.natappfree.cc/images/5.jpg" }],
+    swiperdatas: 
+      [{ "image": "http://liyaohui.natapp1.cc/images/6.jpg" }, 
+        { "image": "http://liyaohui.natapp1.cc/images/7.jpg" }, 
+        { "image": "http://liyaohui.natapp1.cc/images/4.jpg" }, 
+        { "image": "http://liyaohui.natapp1.cc/images/5.jpg" }],
 
     currentTabValue:0,
 
-    scrolldatas: [{ "imgpath": "http://sxcr3v.natappfree.cc/images/14.png", "path": "头条","page":"../myapp3/myapp3"},
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/15.png", "path": "天气" },
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/16.png", "path": "音乐" }, 
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/17.png", "path": "购物" }, 
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/18.png", "path": "邮箱" }, 
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/19.png", "path": "微博" }, 
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/20.png", "path": "论坛" }, 
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/21.png", "path": "导航" }, 
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/22.png", "path": "更多" }],
+    scrolldatas: 
+      [{ "imgpath": "http://liyaohui.natapp1.cc/images/14.png", "path": "头条","page":"../myapp3/myapp3"},
+        { "imgpath": "http://liyaohui.natapp1.cc/images/15.png", "path": "天气" },
+        { "imgpath": "http://liyaohui.natapp1.cc/images/16.png", "path": "音乐" }, 
+        { "imgpath": "http://liyaohui.natapp1.cc/images/17.png", "path": "购物" }, 
+        { "imgpath": "http://liyaohui.natapp1.cc/images/18.png", "path": "邮箱" }, 
+        { "imgpath": "http://liyaohui.natapp1.cc/images/19.png", "path": "微博" }, 
+        { "imgpath": "http://liyaohui.natapp1.cc/images/20.png", "path": "论坛" }, 
+        { "imgpath": "http://liyaohui.natapp1.cc/images/21.png", "path": "导航" }, 
+        { "imgpath": "http://liyaohui.natapp1.cc/images/22.png", "path": "更多" }],
 
-    bottomviewdatas: [{ "imgpath": "http://sxcr3v.natappfree.cc/images/10.png", "path": "首页" },
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/11.png", "path": "热门" },
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/12.png", "path": "通知" },
-      { "imgpath": "http://sxcr3v.natappfree.cc/images/13.png", "path": "我的" }, ]
+    bottomviewdatas:
+      [{ "imgpath": "http://liyaohui.natapp1.cc/images/10.png", "path": "首页" },
+        { "imgpath":"http://liyaohui.natapp1.cc/images/11.png", "path": "热门" },
+        { "imgpath":"http://liyaohui.natapp1.cc/images/12.png", "path": "通知" },
+        { "imgpath":"http://liyaohui.natapp1.cc/images/13.png", "path": "我的" }, ],
+
+
+
+    scrolldatas1: 
+      [{ "name": "查询", "imgpath": "http://liyaohui.natapp1.cc/images/chaxun.png", "imgpath1": "http://liyaohui.natapp1.cc/images/youbian.png"},
+        { "name": "拍照", "imgpath": "http://liyaohui.natapp1.cc/images/paizhao.png", "imgpath1": "http://liyaohui.natapp1.cc/images/youbian.png" },
+        { "name": "扫描", "imgpath": "http://liyaohui.natapp1.cc/images/saomiao.png", "imgpath1": "http://liyaohui.natapp1.cc/images/youbian.png"},
+        { "name": "通讯录", "imgpath": "http://liyaohui.natapp1.cc/images/tongxunlu.png", "imgpath1": "http://liyaohui.natapp1.cc/images/youbian.png"}
+    
+    
+    ]
 
   },
+
  
   selecttab(e)
   
@@ -38,18 +53,68 @@ Page({
 
   },
 
-  clickone()
+  clickone(e)
   {
-    console.log();
-
+    console.log(e.currentTarget.dataset.img);
+    if (e.currentTarget.dataset.img==0){
     wx.navigateTo({
-      url: '../myapp3/myapp3',
-    });
+     url: '../myapp3/myapp3',
+    })
+    }
+
+    console.log(e.currentTarget.dataset.img);
+    if (e.currentTarget.dataset.img == 1) {
+      wx.navigateTo({
+        url: '../p10/p10',
+      })
+    }
+
+    console.log(e.currentTarget.dataset.img);
+    if (e.currentTarget.dataset.img == 2) {
+     wx.switchTab({
+       url: '../p13/p13',
+     })
+    }
+
+
+
+
 
 
   },
 
+  clicktwo(e)
+  {
+    console.log(e.currentTarget.dataset.img1);
+    if (e.currentTarget.dataset.img1==0){
+    wx.navigateTo({
+      url: '../p12/p12',
+    })
+    }
 
+    console.log(e.currentTarget.dataset.img1);
+    if (e.currentTarget.dataset.img1 == 1) {
+      wx.navigateTo({
+        url: '../p11/p11',
+      })
+    }
+
+    console.log(e.currentTarget.dataset.img1);
+    if (e.currentTarget.dataset.img1 == 2) {
+      wx.navigateTo({
+        url: '../p18/p18',
+      })
+    }
+
+    console.log(e.currentTarget.dataset.img1);
+    if (e.currentTarget.dataset.img1 == 3) {
+      wx.navigateTo({
+        url: '../p3/p3',
+      })
+    }
+
+
+  },
 
   /**
    * 生命周期函数--监听页面加载

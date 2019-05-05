@@ -1,0 +1,33 @@
+<!--pages/p13/p13.wxml-->
+<view class='cview'>
+  <view class='topview'>
+    <view class='t1'>专辑封面</view>
+    <view class='t2'>歌曲</view>
+    <view class='t3'>歌手</view>
+  
+  </view>
+
+  <scroll-view class='scrollview' scroll-y="{{true}}">
+    <view class='c1'>
+      <block wx:for="{{musicdatas}}">
+        <view class='cell' data-name='{{item.name}}' data-url='{{item.url}}' data-author='{{item.author}}' data-img='{{item.img}}' bindtap='clickitem' hover-class='clcikstyle'>
+          <view class='imgview'>
+            <image class='cimg' src='{{item.img}}'></image>
+          </view>
+          <view class='nameview'>
+            <view>{{item.name}}</view>
+          </view>
+          <view class='authorview'>
+            <view>{{item.author}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+<view class='bottomview'>
+    <audio id="ad" controls="controls" name="{{name}}" author="{{author}}" poster="{{img}}" src="{{url}}" class='a1'></audio>
+</view>
+
+</view>
+

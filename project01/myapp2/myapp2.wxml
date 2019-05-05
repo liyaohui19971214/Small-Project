@@ -10,7 +10,7 @@
     </view>
   </view>
 
-  <swiper class='swiperview' indicator-dots='{{true}}' indicator-active-color='red' autoplay='{{true}}' interval='{{3000}}' duration='{{2000}}'>
+  <swiper class='swiperview' indicator-dots='{{true}}' indicator-active-color='red' autoplay='{{true}}' interval='{{3000}}' duration='{{2000}}' circular="true">
     <block wx:for="{{swiperdatas}}">
       <swiper-item> 
         <view class='sview'>
@@ -22,9 +22,9 @@
 
   <view class='contentview'>
     <view class='c1'>
-      <view class='t1 {{currentTabValue==0 ? "on":""}}' data-value='0' bindtap='selecttab'>新闻</view>
-     <view class='t1 {{currentTabValue==1 ? "on":""}}' data-value='1' bindtap='selecttab'>短视频</view>
-     <view class='t1 {{currentTabValue==2 ? "on":""}}' data-value='2' bindtap='selecttab'>关注</view>
+      <view class='t1 {{currentTabValue==0 ? "on":""}}' data-value='0' bindtap='selecttab'>生活</view>
+     <view class='t1 {{currentTabValue==1 ? "on":""}}' data-value='1' bindtap='selecttab'>学习</view>
+     <view class='t1 {{currentTabValue==2 ? "on":""}}' data-value='2' bindtap='selecttab'>小功能</view>
     </view>
 
 
@@ -36,7 +36,7 @@
             <block wx:for="{{scrolldatas}}">
               <view class="s2">
                   <view class="s3">
-                      <image src="{{item.imgpath}}" class="s4" bindtap='clickone' />
+                    <image src="{{item.imgpath}}" class="s4" data-img='{{index}}' bindtap='clickone' />
                   </view>
                   <text>{{item.path}}</text>
               </view>
@@ -49,11 +49,39 @@
 
 
       <swiper-item>
-        视频
+        工具
       </swiper-item>
 
       <swiper-item>
-        我的
+        <scroll-view class='scrollview1' scroll-y="{{true}}">
+          <view class='imgview' >
+           <block wx:for="{{scrolldatas1}}">
+              <view class='imgview1' data-img1='{{index}}' bindtap='clicktwo' hover-class='clcikstyle'>
+
+                 <view class="imgview2">
+                    <image src="{{item.imgpath}}" class='i1'></image>
+                 </view>
+
+                 <view class="imgview3">
+                    <view class='imgview5'>
+                    {{item.name}}
+                    </view>
+                 </view>
+
+                 <view class="imgview4">
+                     <image src="{{item.imgpath1}}" class='i1'></image>
+                 </view>
+        
+        
+              </view>
+           </block>
+           </view>
+        </scroll-view>
+
+
+
+
+
       </swiper-item>
 
     </swiper>
@@ -65,7 +93,7 @@
 
   </view>
 
-  <view class='bottomview'>
+  <!-- <view class='bottomview'>
      <view class='b1'>
         <block wx:for="{{bottomviewdatas}}">
           <view class='b2'>
@@ -83,7 +111,7 @@
   
   
   
-  </view>
+  </view> -->
 
 
 
