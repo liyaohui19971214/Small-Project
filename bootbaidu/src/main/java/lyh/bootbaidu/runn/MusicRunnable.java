@@ -1,6 +1,10 @@
 package lyh.bootbaidu.runn;
 
 
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,8 +46,25 @@ public class MusicRunnable implements Runnable {
 		
 		
 		//启动线程下载音乐
-		new Thread(new DownMusicRunn(lists)).start();
-		
+//		new Thread(new DownMusicRunn(lists)).start();
+		try {
+			Socket  socket = new Socket("192.168.255.44",8700);
+			
+			System.out.println("和自己建立连接:"+socket);
+			
+			//List<Music>  lists
+			
+			ObjectOutputStream   out = new ObjectOutputStream(socket.getOutputStream());
+			out.writeObject(lists);
+			out.flush();
+			
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		System.out.println("dao-->"+dao);

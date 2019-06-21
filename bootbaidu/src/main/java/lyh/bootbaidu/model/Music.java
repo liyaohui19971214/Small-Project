@@ -1,7 +1,9 @@
 package lyh.bootbaidu.model;
 
 
-public class Music {
+import  java.io.Serializable;
+
+public class Music   implements Serializable{
 	
 	
 	public String getSname() {
